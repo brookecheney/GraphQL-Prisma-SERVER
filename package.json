@@ -1,0 +1,30 @@
+{
+  "name": "graphql_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dockerStart": "docker-compose -f ./docker-compose.yml up -d",
+    "deploy": "prisma deploy",
+    "start": "ts-node-dev --no-notify --respawn --transpileOnly ./",
+    "load": "node ./seed/seedDatabase.js",
+    "reset": "prisma reset --force",
+    "delete": "prisma delete --force"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^14.1.1",
+    "graphql-request": "^1.8.2",
+    "graphql-yoga": "^1.17.4",
+    "nexus": "^0.10.0",
+    "nexus-prisma": "^0.3.4",
+    "prisma-client-lib": "^1.27.4"
+  },
+  "devDependencies": {
+    "ts-node": "^8.0.2",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.3.3333"
+  }
+}

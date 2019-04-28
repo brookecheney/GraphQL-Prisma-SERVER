@@ -1,0 +1,6 @@
+type Product {
+  id: ID! @id
+  name: String
+  price: Int
+  country: String
+}
